@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Core
 {
-    public class Bootstrab : MonoBehaviour
+    public class Bootstrap : MonoBehaviour
     {
         private void Start()
         {
