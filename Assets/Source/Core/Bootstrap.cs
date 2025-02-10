@@ -7,15 +7,22 @@ namespace Core
     {
         private void Start()
         {
-            Hotdog classicHotdog = new ClassicHotdog();
-            Debug.Log($"{classicHotdog.GetName()} — {classicHotdog.GetCost()}р.");
-            Debug.Log("Дополнительная информация:");
+            Hotdog[] baseHotdogs = new Hotdog[]
+            {
+                new ClassicHotdog(),
+                new CaesarHotdog(),
+                new MeatHotdog()
+            };
 
-            Hotdog classicWithPickles = new HotdogWithPickles(new ClassicHotdog());
-            Debug.Log($"{classicWithPickles.GetName()} — {classicWithPickles.GetCost()}р.");
-
-            Hotdog classicWithSweetOnion = new HotdogWithSweetOnion(new ClassicHotdog());
-            Debug.Log($"{classicWithSweetOnion.GetName()} — {classicWithSweetOnion.GetCost()}р.");
+            foreach (var hotdog in baseHotdogs)
+            {
+                Debug.Log($"{hotdog.GetName()} ({hotdog.GetWeight()}г) — {hotdog.GetCost()}р.");
+                Debug.Log("Дополнительная информация:");
+                Hotdog withPickles = new HotdogWithPickles(hotdog);
+                Debug.Log($"{withPickles.GetName()} ({withPickles.GetWeight()}г) — {withPickles.GetCost()}р.");
+                Hotdog withSweetOnion = new HotdogWithSweetOnion(hotdog);
+                Debug.Log($"{withSweetOnion.GetName()} ({withSweetOnion.GetWeight()}г) — {withSweetOnion.GetCost()}р.");
+            }
         }
     }
 }

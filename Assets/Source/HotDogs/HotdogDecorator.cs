@@ -5,5 +5,6 @@ namespace HotDogs
         protected readonly Hotdog _hotdog;
         public HotdogDecorator(Hotdog hotdog) : base(hotdog.GetName()) => _hotdog = hotdog;
         public override int GetCost() => _hotdog.GetCost();
+        public override int GetWeight() => _hotdog.GetWeight();
     }
 }
