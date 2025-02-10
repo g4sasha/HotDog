@@ -1,11 +1,9 @@
-using UnityEngine;
-
 namespace HotDogs
 {
-    public class HotdogWithPickles : HotdogDecorator
+    public class ConfigurableHotdogDecorator : HotdogDecorator
     {
-        private static readonly HotdogDecoratorSO _config = Resources.Load<HotdogDecoratorSO>("HotdogWithPicklesConfig");
-        public HotdogWithPickles(Hotdog hotdog) : base(hotdog) { }
+        private readonly HotdogDecoratorSO _config;
+        public ConfigurableHotdogDecorator(Hotdog hotdog, HotdogDecoratorSO config) : base(hotdog) => _config = config;
         public override int GetCost() => _hotdog.GetCost() + _config.AdditionalCost;
         public override int GetWeight() => _hotdog.GetWeight() + _config.AdditionalWeight;
         public override string GetName() => _hotdog.GetName() + " " + _config.DecoratorSuffix;

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d49ebbeac380f07428f77261b3339758, type: 3}
   m_Name: HotdogWithPicklesConfig
   m_EditorClassIdentifier: 
-  DecoratorSuffix: "\u0441 \u043C\u0430\u0440\u0438\u043D\u043E\u0432\u0430\u043D\u043D\u044B\u043C\u0438
+  <DecoratorSuffix>k__BackingField: "\u0441 \u043C\u0430\u0440\u0438\u043D\u043E\u0432\u0430\u043D\u043D\u044B\u043C\u0438
     \u043E\u0433\u0443\u0440\u0446\u0430\u043C\u0438"
-  AdditionalCost: 50
-  AdditionalWeight: 20
+  <AdditionalCost>k__BackingField: 50
+  <AdditionalWeight>k__BackingField: 20

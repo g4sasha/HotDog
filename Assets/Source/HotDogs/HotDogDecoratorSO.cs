@@ -5,8 +5,8 @@ namespace HotDogs
     [CreateAssetMenu(fileName = "HotdogDecoratorConfig", menuName = "HotDogs/HotdogDecoratorConfig")]
     public class HotdogDecoratorSO : ScriptableObject
     {
-        public string DecoratorSuffix;
-        public int AdditionalCost;
-        public int AdditionalWeight;
+        [field: SerializeField] public string DecoratorSuffix { get; private set; }
+        [field: SerializeField] public int AdditionalCost { get; private set; }
+        [field: SerializeField] public int AdditionalWeight { get; private set; }
     }
 }
